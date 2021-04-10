@@ -28,7 +28,12 @@ function register($data){
     $telp = $data['telp'];
 
     $result = mysqli_query($conn, "SELECT username FROM masyarakat WHERE username = '$username'");
+    $result2 = mysqli_query($conn, "SELECT username FROM petugas WHERE username = '$username'");
     if(mysqli_fetch_assoc($result)){
+        echo "<script>alert('Username talah terdaftar')</script>";
+        return false;
+    }
+    if(mysqli_fetch_assoc($result2)){
         echo "<script>alert('Username talah terdaftar')</script>";
         return false;
     }

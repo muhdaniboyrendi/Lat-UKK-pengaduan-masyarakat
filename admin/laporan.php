@@ -60,4 +60,5 @@ $laporan = data("SELECT * FROM masyarakat
         <br>
         <a href="index.php">Kembali</a>
     </body>
+    <script type="text/javascript">window.print();</script>
 </html>
